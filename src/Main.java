@@ -2,21 +2,12 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Чтобы сложить числа - введите 1, чтобы умножить - 2");
-        int method = scanner.nextInt();
-        if (1 == method) {
-            System.out.println("Поочередно введите два целочисленных числа");
-            int a = scanner.nextInt();
-            int b = scanner.nextInt();
-            System.out.println("Результат сложения этих чисел: " + (a + b));
-        } else if (method == 2) {
-            System.out.println("Поочередно введите два целочисленных числа");
-            int a = scanner.nextInt();
-            int b = scanner.nextInt();
-            System.out.println("Результат умножения этих чисел: " + (a * b));
-        } else {
-            System.out.println("Входные данные для определения метода некорретны, перезапустите программу, чтобы попробовать снова");
-        }
+        System.out.println("-----Изначальный вариант-----");
+        Calculator calculator = new Calculator();
+        calculator.SumOrMultiply();
+        System.out.println("-----Вариант с разделениями методов-----");
+        Calculatorv2 calculatorv2 = new Calculatorv2();
+        calculatorv2.Sum();
+        calculatorv2.Multiply();
     }
 }
